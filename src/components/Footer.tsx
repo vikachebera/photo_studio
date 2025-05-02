@@ -7,7 +7,7 @@ export default function Footer() {
 
 
                 <div className={classes.logo}>
-                    <span>LightRoom</span>
+                    <span>LOGO</span>
                 </div>
                 <nav className={classes.menu}>
                     <a href="/lightframe-studio/public">Головна</a>
@@ -23,7 +23,7 @@ export default function Footer() {
                 </div>
 
                 <div className={classes.copyright}>
-                    &copy; {new Date().getFullYear()} LightRoom Studio. Усі права захищені.
+                    &copy; {new Date().getFullYear()} LOGO Studio. Усі права захищені.
                 </div>
 
             </div>

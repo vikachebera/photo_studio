@@ -1,8 +1,9 @@
 .footer {
-    background-color: #1a1a1a;
-    color: #e0e0e0;
+    background-color: lightgrey;
+    color: #333333;
     padding: 2rem 1rem;
     border-top: 1px solid #333;
+    height: 40vh;
 }
 
 .container {
@@ -28,19 +29,19 @@
 
 .menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 0.8rem;
 }
 
 .menu a {
-    color: #e0e0e0;
+    color: #333333;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
 .menu a:hover {
-    color: #3a3a3a;
+    color: #f2f2f2;
 }
 
 .socials {
