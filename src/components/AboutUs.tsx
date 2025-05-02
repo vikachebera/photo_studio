@@ -1,0 +1,39 @@
+import classes from "./styles/AboutUs.module.css";
+
+export default function AboutUs() {
+    return (
+        <section className={classes.container} id="about">
+            <div className={classes.image}></div>
+
+            <article className={`${classes.text} ${classes["text-block-1"]}`}>
+                <h2>Місце, де народжується краса</h2>
+                <p>
+                    Два світлі зали, наповнені ніжністю та затишком, допоможуть створити кадри, які зачаровують.
+                </p>
+            </article>
+
+            <article className={`${classes.text} ${classes["text-block-2"]}`}>
+                <h2>Фотостудія LOGO — простір легкості й натхнення</h2>
+                <p>У нашій студії ви можете:</p>
+                <ul>
+                    <li>створити ніжні сімейні фотосесії</li>
+                    <li>зняти романтичні love story</li>
+                    <li>організувати дитячі фотосесії</li>
+                    <li>провести камерні події та майстер-класи</li>
+                </ul>
+                <p>Наші зали обладнані для:</p>
+                <ul>
+                    <li>зйомок з природним освітленням</li>
+                    <li>творчих кулінарних проєктів</li>
+                    <li>сцен із водними ефектами в аквазоні</li>
+                </ul>
+                <p>
+                    Ми подбаємо про те, щоб ваша зйомка пройшла легко, а результат перевершив очікування.
+                </p>
+            </article>
+
+            <div className={classes.image_2}></div>
+        </section>
+
+    )
+}
