@@ -1,77 +1,75 @@
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    background-color: #f5f5f5;
+    background-color: #fafafa;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .image {
-    grid-column: 1 / span 9;
-    height: 100%;
-    min-height: 80vh;
+    grid-column: 1 / span 7;
+    min-height: 70vh;
     background-image: url("/assets/pic3.jpg");
     background-size: cover;
     background-position: center;
+    border-radius: 12px;
 }
 
 .text-block-1 {
-    grid-column: 10 / span 6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    grid-column: 8 / span 6;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
     padding: 2rem;
-    background-color: rgba(40, 40, 40, 0.52);
-    color: white;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+
 }
 
 .text-block-2 {
     grid-column: 1 / span 6;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
     padding: 2rem;
-    background-color: rgba(40, 40, 40, 0.52);
-    color: white;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+
 }
 
 .image_2 {
     grid-column: 7 / span 6;
-    height: 100%;
-    min-height: 80vh;
+    min-height: 70vh;
     background-image: url("/assets/pic2.jpg");
     background-size: cover;
     background-position: center;
+    border-radius: 12px;
 }
 
 h2, h3 {
-    font-weight: 700;
-    color: white;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    text-transform: none;
 }
 
 h2 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
 }
 
 h3 {
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-size: clamp(1.6rem, 3vw, 2rem);
 }
 
 .text {
-    font-size: clamp(1rem, 1.5vw, 1.2rem);
-    line-height: 1.7;
+    font-size: clamp(1rem, 1.7vw, 1.3rem);
+    line-height: 1.6;
     font-weight: 300;
 }
 
 .text p {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 992px) {
-    .main {
+    .container {
         display: flex;
         flex-direction: column;
         padding: 2rem 1rem;
@@ -80,11 +78,11 @@ h3 {
     .image, .image_2 {
         height: 50vh;
         border-radius: 12px;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
     }
 
     .text-block-1, .text-block-2 {
-        padding: 2rem;
-        margin-bottom: 3rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
     }
 }
