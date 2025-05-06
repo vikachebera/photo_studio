@@ -2,15 +2,17 @@
   "name": "photo_studio",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:server": "node backend/server.js",
     "build": "../node_modules/.bin/tsc -b && vite build",
     "lint": "../node_modules/.bin/eslint photo_studio",
     "preview": "../node_modules/.bin/vite preview"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.5.0",
+    "express": "^5.1.0",
     "mysql2": "^3.14.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

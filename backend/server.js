@@ -6,6 +6,8 @@ const app = express();
 const port = 5000;
 
 app.use(cors());
+console.log(process.env.DB_USERNAME);
+console.log(process.env.DB_PASSWORD);
 
 const pool = mysql.createPool({
     host: 'localhost',

@@ -10,18 +10,13 @@ import {Link} from "react-router-dom"
 import classes from "./styles/Carousel.module.css";
 
 export default function Carousel() {
-    // const images = [
-    //     '/assets/pic1.webp',
-    //     '/assets/pic2.webp',
-    //     '/assets/pic3.webp',
-    //     '/assets/pic4.webp'
-    // ]
+
     const images = [
-        '/assets/pic1.jpg',
-        '/assets/pic2.jpg',
-        '/assets/pic3.jpg',
-        '/assets/pic4.jpg',
-        '/assets/pic5.jpg'
+        '/assets/loft/1.jpg',
+        '/assets/nude/2.jpg',
+        '/assets/loft/3.jpg',
+        '/assets/nude/3.jpg',
+        '/assets/nude/1.jpg'
     ]
 
     return (
