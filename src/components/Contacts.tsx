@@ -169,7 +169,7 @@ export default function Contacts() {
     );
 
     return (
-        <div className={classes.container}>
+        <div className={classes.container} id="contacts">
             <h2 className={classes.title}>Контакти</h2>
             <div className={classes.formContainer}>
                 <ContactForm/>

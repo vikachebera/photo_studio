@@ -1,5 +1,5 @@
 import classes from "./styles/BookingCalendar.module.css";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -44,7 +44,6 @@ const isTimeSlotBooked = (booking: Booking, slot: string) => {
     const bookingStart = parseInt(booking.time_start.split(':')[0]);
     const bookingEnd = parseInt(booking.time_end.split(':')[0]);
 
-    // Перевіряємо перетин інтервалів
     return (bookingStart < slotEnd && bookingEnd > slotStart);
 };
 
@@ -127,7 +126,7 @@ export default function BookingCalendar() {
 
     return (
         <div className={classes.calendarContainer}>
-            <h1 className={classes.title}>Календар бронювань</h1>
+            <h2 className={classes.title}>Календар бронювань</h2>
 
             {error && <div className={classes.error}>{error}</div>}
             {loading && <div className={classes.loading}>Завантаження...</div>}
@@ -152,24 +151,24 @@ export default function BookingCalendar() {
 
                 <div className={classes.datePickerGroup}>
                     <label>
-                        Початкова дата:
-                        <DatePicker
-                            selected={startDate}
-                            onChange={(date) => date && setStartDate(date)}
-                            dateFormat="dd.MM.yyyy"
-                            disabled={loading}
-                        />
-                    </label>
+                        Початкова дата: </label>
+
+                    <DatePicker
+                        selected={startDate}
+                        onChange={(date) => date && setStartDate(date)}
+                        dateFormat="dd.MM.yyyy"
+                        disabled={loading}
+                    />
                     <label>
-                        Кінцева дата:
-                        <DatePicker
-                            selected={endDate}
-                            onChange={(date) => date && setEndDate(date)}
-                            dateFormat="dd.MM.yyyy"
-                            minDate={startDate}
-                            disabled={loading}
-                        />
-                    </label>
+                        Кінцева дата: </label>
+
+                    <DatePicker
+                        selected={endDate}
+                        onChange={(date) => date && setEndDate(date)}
+                        dateFormat="dd.MM.yyyy"
+                        minDate={startDate}
+                        disabled={loading}
+                    />
                 </div>
             </div>
 
@@ -194,7 +193,7 @@ export default function BookingCalendar() {
                                 const dateKey = getDateKey(day);
                                 const bookingsForDay = bookingMap[dateKey] ? Object.values(bookingMap[dateKey]) : [];
                                 const isBooked = bookingsForDay.some(booking => isTimeSlotBooked(booking, slot));
-                                const price = 900; // Можете взяти з першого доступного бронювання або встановити базову ціну
+                                const price = 900;
 
                                 return (
                                     <div

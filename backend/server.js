@@ -203,6 +203,39 @@ app.get("/api/studios", async (req, res) => {
         }
     }
 });
+
+app.get("/api/bookings", async (req, res) => {
+    const room_id = req.query.room_id;
+
+    if (!room_id) {
+        return res.status(400).json({message: "Не вказано room_id"});
+    }
+    let connection;
+    try {
+        connection = await pool.getConnection();
+        const [rows] = await connection.query(`
+            SELECT
+                id,
+                date,
+                TIME_FORMAT(time_start, '%H:%i') AS time_start,
+                TIME_FORMAT(time_end, '%H:%i') AS time_end,
+                room_id
+            FROM bookings
+            WHERE room_id = ?`, [room_id]
+        );
+        res.status(200).json(rows);
+    } catch (err) {
+        console.error("Помилка при завантаженні бронювань:", err);
+        res.status(500).json({
+            success: false,
+            message: "Помилка сервера: " + (err instanceof Error ? err.message : "Невідома помилка")
+        });
+    } finally {
+        if (connection) {
+            await connection.release();
+        }
+    }
+})
 app.listen(port, () => {
     console.log(`Сервер працює на порту ${port}`);
 });

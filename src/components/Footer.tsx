@@ -1,19 +1,19 @@
-import classes from './styles/Footer.module.css'
+import classes from './styles/Footer.module.css';
 
 export default function Footer() {
     return (
         <footer className={classes.footer}>
             <div className={classes.container}>
-
-
                 <div className={classes.logo}>
                     <span>LOGO</span>
                 </div>
+
                 <nav className={classes.menu}>
-                    <a href="/lightframe-studio/public">Головна</a>
-                    <a href="/about">Про нас</a>
-                    <a href="/services">Послуги</a>
-                    <a href="/contacts">Контакти</a>
+                    <a href="/">Головна</a>
+                    <a href="/#about">Про нас</a>
+                    <a href="/#locations">Локації</a>
+                    <a href="/#team">Команда</a>
+                    <a href="/#contacts">Контакти</a>
                 </nav>
 
                 <div className={classes.socials}>
@@ -25,8 +25,7 @@ export default function Footer() {
                 <div className={classes.copyright}>
                     &copy; {new Date().getFullYear()} LOGO Studio. Усі права захищені.
                 </div>
-
             </div>
         </footer>
-    )
+    );
 }

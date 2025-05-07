@@ -43,7 +43,7 @@ export default function BookingForm() {
                 if (text) {
                     result = JSON.parse(text);
                 }
-                alert(result || "Бронювання успішно збережено!");
+                alert("Бронювання успішно збережено!");
             } else {
                 alert(`Помилка: ${response.status} ${response.statusText}`);
             }
@@ -63,59 +63,61 @@ export default function BookingForm() {
             <h2 className={classes.title}>Забронювати зал</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className={classes.group}>
-                    <label>Ім'я
-                        <input {...register("name", {required: "Ім'я обов'язкове"})} className={classes.input}
-                               disabled={isSubmitting}/>
-                        {errors.name && <span>{errors.name.message}</span>}
-                    </label>
+                    <label>Ім'я </label>
+
+                    <input {...register("name", {required: "Ім'я обов'язкове"})} className={classes.input}
+                           disabled={isSubmitting}/>
+                    {errors.name && <span>{errors.name.message}</span>}
                 </div>
                 <div className={classes.group}>
-                    <label>Телефон
-                        <input {...register("phone", {required: "Телефон обов'язковий"})} className={classes.input}
-                               disabled={isSubmitting}/>
-                        {errors.phone && <span>{errors.phone.message}</span>}
-                    </label>
+                    <label>Телефон </label>
+
+                    <input {...register("phone", {required: "Телефон обов'язковий"})} className={classes.input}
+                           disabled={isSubmitting}/>
+                    {errors.phone && <span>{errors.phone.message}</span>}
                 </div>
                 <div className={classes.group}>
-                    <label>Зал
-                        <select {...register("room", {required: "Виберіть зал"})} required className={classes.select}>
-                            <option value="">Оберіть зал</option>
-                            <option value="1">Зал Soft</option>
-                            <option value="2">Зал Nude</option>
-                            <option value="3">Зал Loft</option>
-                        </select></label>
+                    <label>Зал</label>
+                    <select {...register("room", {required: "Виберіть зал"})} required className={classes.select}>
+                        <option value="">Оберіть зал</option>
+                        <option value="1">Зал Soft</option>
+                        <option value="2">Зал Nude</option>
+                        <option value="3">Зал Loft</option>
+                    </select>
                 </div>
                 <div className={classes.group}>
-                    <label>Початок
-                        <DatePicker
-                            selected={startDate}
-                            onChange={setStartDate}
-                            showTimeSelect
-                            timeIntervals={30}
-                            dateFormat="dd.MM.yyyy HH:mm"
-                            placeholderText="Оберіть дату й час"
-                            className={classes.input}
-                            disabled={isSubmitting}
-                        />
-                    </label>
+                    <label className={classes.label}>Початок </label>
+
+                    <DatePicker
+                        selected={startDate}
+                        onChange={setStartDate}
+                        showTimeSelect
+                        timeIntervals={30}
+                        dateFormat="dd.MM.yyyy HH:mm"
+                        placeholderText="Оберіть дату й час"
+                        className={classes.input}
+                        disabled={isSubmitting}
+                    />
                 </div>
                 <div className={classes.group}>
-                    <label>Кінець
-                        <DatePicker
-                            selected={endDate}
-                            onChange={setEndDate}
-                            showTimeSelect
-                            timeIntervals={30}
-                            dateFormat="dd.MM.yyyy HH:mm"
-                            placeholderText="Оберіть дату й час"
-                            className={classes.input}
-                            disabled={isSubmitting}
-                        />
-                    </label>
+                    <label className={classes.label}>Кінець </label>
+
+                    <DatePicker
+                        selected={endDate}
+                        onChange={setEndDate}
+                        showTimeSelect
+                        timeIntervals={30}
+                        dateFormat="dd.MM.yyyy HH:mm"
+                        placeholderText="Оберіть дату й час"
+                        className={classes.input}
+                        disabled={isSubmitting}
+                    />
                 </div>
-                <button type="submit" className={classes.submit} disabled={isSubmitting}>
+                <div className={classes.button}>
+                <button type="submit" className={classes.cta} disabled={isSubmitting}>
                     {isSubmitting ? "Обробка..." : "Забронювати"}
                 </button>
+                </div>
             </form>
         </div>
     );
