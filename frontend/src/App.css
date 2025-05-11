@@ -69,6 +69,10 @@
     cursor: pointer;
 }
 
+.privacy-policy-page .cookie-consent-container {
+    display: none !important;
+}
+
 @media (max-width: 768px) {
     .cookie-consent-container {
         flex-direction: column;

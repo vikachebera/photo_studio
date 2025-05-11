@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import {Swiper, SwiperSlide} from "swiper/react"
 import {Navigation, Autoplay} from "swiper/modules"
 import {Link} from "react-router-dom"
+// @ts-ignore
 import classes from "./styles/Carousel.module.css";
 
 export default function Carousel() {
