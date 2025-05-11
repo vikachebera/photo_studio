@@ -188,7 +188,6 @@ app.get("/api/studios", async (req, res) => {
     try {
         connection = await pool.getConnection();
         const [rows] = await connection.query("SELECT id, name FROM rooms");
-        console.log(rows);
 
         res.status(200).json(rows);
     } catch (err) {
