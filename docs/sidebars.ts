@@ -28,7 +28,7 @@ const sidebars: SidebarsConfig = {
         },
         {
             type: 'doc',
-            id: 'LICENSE.md',
+            id: 'LICENSE',
             label: 'Ліцензія',
         }
     ],
