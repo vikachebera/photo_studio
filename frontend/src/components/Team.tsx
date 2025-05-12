@@ -1,3 +1,4 @@
+import React from 'react';
 import classes from "./styles/Team.module.css";
 import team from '../data/team'
 import {Swiper, SwiperSlide} from "swiper/react";

@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Home from "./pages/Home";
 import BookingPage from "./pages/Booking";
 import Layout from "./components/Layout";
-import CookieConsent from "react-cookie-consent";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import CookieBanner from "./components/CookieBanner";
 
