@@ -1,5 +1,6 @@
-# Logs
-logs
+**/node_modules/
+
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,22 +8,21 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-**/node_modules/
-
-dist
-dist-ssr
+dist/
+dist-ssr/
 *.local
 
 .vscode/*
 !.vscode/extensions.json
-../.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-backend/.env
 
+.env
+*.env
 
 *storybook.log

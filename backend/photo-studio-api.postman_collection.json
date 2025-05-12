@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "80157ea5-065b-4f45-b9a2-53cb83f98aa8",
+		"name": "photo_studio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33883757"
+	},
+	"item": [
+		{
+			"name": "rooms",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/rooms",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"rooms"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api/studios",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Іван Петренко\",\r\n  \"phone\": \"+380991234567\",\r\n  \"email\": \"example@email.com\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/contact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"contact"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
